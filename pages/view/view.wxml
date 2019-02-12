@@ -1,0 +1,84 @@
+<!--pages/music/music.wxml-->
+
+<view class="box">
+  <view class="box-title">view</view>
+  <view hover-class="music-hover">hover-class</view>
+</view>
+
+<view class="box">
+  <view class="box-title">scroll-view</view>
+  <scroll-view
+    class="scroll-section"
+    scroll-y
+    scroll-into-view=""
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scrolling"
+    scroll-with-animation="true">
+    <view id="green" class="scroll-view-item bg-green">1</view>
+    <view id="red" class="scroll-view-item bg-red">2</view>
+    <view id="yellow" class="scroll-view-item bg-yellow">3</view>
+    <view id="orange" class="scroll-view-item bg-orange">4</view>
+  </scroll-view>
+
+  <view class="btn-area">
+    <button size="mini"></button>
+  </view>
+</view>
+
+<view class="box">
+  <view class="box-title">swiper</view>
+
+  <swiper
+    indicator-dots="true"
+    indicator-color="white"
+    indicator-active-color="orange"
+    autoplay="true"
+    interval="1000"
+    duration="500"
+    circular="true"
+    previous-margin="10px"
+    next-margin="10px"
+    display-multiple-items="1"
+    vertical="true"
+    current="2"
+    bindchange="swiperChanged"
+    bindanimationfinish="swiperAniamtionFinished">
+    <swiper-item wx:for="{{swiperList}}" style="background: {{item}};" wx:key="index">
+      <text>{{item}}</text>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="box">
+  <view class="box-title">icon</view>
+
+  <block wx:for="{{iconList}}" wx:key="index">
+    <icon type="{{item.type}}" size="{{item.size}}" color="{{item.color}}"></icon>
+  </block> 
+</view>
+
+<view class="box">
+  <view class="box-title">text</view>
+
+  <text selectable="true" space="true">我是     一段文本</text>
+</view>
+
+<view class="box">
+  <view class="box-title">rich-text</view>
+
+  <rich-text nodes="{{nodes}}" bindtap="richTextTap"></rich-text>
+</view>
+
+<view class="box">
+  <view class="box-title">progress</view>
+
+  <progress
+    percent="22.33"
+    show-info="true"
+    stroke-width="12"
+    activeColor="orange"
+    backgroundColor="yellow"
+    active="true">
+  </progress>
+</view>

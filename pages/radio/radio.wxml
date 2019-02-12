@@ -1,0 +1,44 @@
+<!--pages/radio/radio.wxml-->
+<view class="box">
+  <view class="box-title">Radio</view>
+
+  <radio-group bindchange="radioSelectChanged">
+    <radio
+      wx:for="{{radioList}}"
+      wx:key="{{index}}"
+      value="{{item.code}}"
+      checked="{{item.checked}}"
+      disabled="{{item===0 ? true : false}}">
+        {{item.name}}
+      </radio>
+  </radio-group>
+</view>
+
+<view class="box">
+  <view class="box-title">Slider</view>
+
+  <slider
+    min="0"
+    max="100"
+    value="13"
+    backgroundColor="orange"
+    activeColor="green"
+    block-size="20"
+    block-color="red"
+    show-value="true"
+    bindchange="sliderChanged"
+    bindchanging="sliderChanging">
+  </slider>
+</view>
+
+<view class="box">
+  <view class="box-title">audio</view>
+
+  <!-- <audio
+    src="https://www.leebyy.top/wx/musics"
+    controls='true'>
+  </audio> -->
+</view>
+
+<web-view src="http://192.168.1.4/index">
+</web-view>

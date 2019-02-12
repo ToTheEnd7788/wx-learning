@@ -1,0 +1,88 @@
+<view class="box">
+  <view class="box-title">selector</view>
+  <picker
+    range="{{range}}"
+    value="{{index}}"
+    mode="selector"
+    range-key="name"
+    bindchange="selectChange"
+    bindcolumnchange="multipleColumnChanged">
+    <view style="color: green;">当前选择: {{range[index].name}}</view>
+  </picker>
+</view>
+
+<view class="box">
+  <view class="box-title">multiSelector</view>
+
+  <picker
+    mode="multiSelector"
+    range="{{multiRange02}}"
+    value="{{multiValue}}"
+    range-key="name"
+    bindchange="confirmMultipicker">
+    <view
+      wx:for="{{multiRange02}}"
+      wx:key="{{index}}">
+      当前选择: {{multiRange02[index][multiValue[index]].name}}
+    </view>
+  </picker>
+</view>
+
+<view class="box">
+  <view class="box-title">time</view>
+  <picker
+    mode="time"
+    value="{{time}}"
+    start="00:00"
+    end="23:59"
+    bindchange="timeChanged"
+    bindcancel="timePickeCancel">
+    <view>当前时间: {{time}}</view>
+  </picker>
+</view>
+
+<view class="box">
+  <view class="box-title">date</view>
+
+  <picker
+    mode="date"
+    start="2009-9-01"
+    end="2018-7-14"
+    fields="day"
+    value="{{date}}"
+    bindchange="changeDate">
+    当前时间: {{date}}
+  </picker>
+</view>
+
+<view class="box">
+  <view class="box-title">省市区</view>
+
+  <picker
+    mode="region"
+    value="{{region}}"
+    custom-item="自定义"
+    bindchange="regionChange">
+    当前地区: {{region}}
+  </picker>
+</view>
+
+<view class="box">
+  <view class="box-title">picker-view-column:[设置的密码为]: {{password}}</view>
+  <view></view>
+  <picker-view
+    indicator-style="height: 50px;"
+    style="height:100px; width: 100%; background: green; color: white;"
+    value="{{password}}"
+    bindchange="pickerViewChanged">
+    <picker-view-column>
+      <view wx:for="{{[1,2,3,4,5,6,7,8,9,0]}}" wx:key="{{index}}" style="line-height:50px">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{[1,2,3,4,5,6,7,8,9,0]}}" wx:key="{{index}}" style="line-height:50px">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{[1,2,3,4,5,6,7,8,9,0]}}" wx:key="{{index}}" style="line-height:50px">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

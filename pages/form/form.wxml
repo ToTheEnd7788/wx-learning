@@ -1,0 +1,57 @@
+<!--pages/movie/movie.wxml-->
+<view class="box">
+  <view class="box-title">button</view>
+
+  <button
+    wx:for="{{[1,2,3]}}"
+    wx:key="index"
+    type="{{index === 1 ? 'primary' : (index === 2 ? 'warn' : 'default')}}"
+    plain="{{index === 1 ? true : false}}"
+    disabled='{{index === 0 ? true : false}}'
+    loading="{{index === 2 ? true : false}}">
+    按钮{{index}}
+  </button>
+
+</view>
+
+<view class="box">
+  <view class="box-title">checkbox</view>
+
+  {{checkList}}
+
+  <checkbox-group bindchange="checkedChanged">
+    <label wx:for="{{checkboxList}}" wx:key="index">
+      <checkbox
+        value="{{item.code}}"
+        checked="{{item.isSelect}}"
+        disabled='{{index === 2 ? true : false}}'
+        color="red">
+        {{item.name}}
+      </checkbox>
+    </label>
+  </checkbox-group>
+</view>
+
+<view class="box">
+  <view class="box-title">form</view>
+
+  <form>
+    <input
+      type="text"
+      value=""
+      placeholder="Biaoyeye"
+      placeholder-style='color: red;'
+      cursor-spacing="20"
+      auto-focus="true"
+      confirm-type="next"
+      confirm-hold="true">
+      </input>
+  </form>
+</view>
+
+<view class="box">
+  <view class="box-title">request</view>
+
+  <view>{{resContent}}</view>
+  <button size="mini" type="primary" bindtap="requestData">发起请求</button>
+</view>

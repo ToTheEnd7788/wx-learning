@@ -1,0 +1,31 @@
+/* pages/music/music.wxss */
+.music-hover {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.scroll-section {
+  height: 100px;
+  border: 1px solid #333;
+}
+
+.scroll-view-item {
+  height: 100px;
+}
+
+.bg-red {
+  background: red;
+}
+
+.bg-yellow {
+  background: yellow;
+}
+
+.bg-green {
+  background: green;
+}
+
+.bg-orange {
+  background: orange;
+}

@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/radio/radio",
+    "pages/picker/picker",
+    "pages/form/form",
+    "pages/view/view",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "#c567fc",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "My First Wx Product",
+    "navigationBarTextStyle": "#000"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/view/view",
+        "text": "视图容器"
+      },
+      {
+        "pagePath": "pages/form/form",
+        "text": "表单组件"
+      },
+      {
+        "pagePath": "pages/picker/picker",
+        "text": "Picker"
+      },
+      {
+        "pagePath": "pages/radio/radio",
+        "text": "Radio"
+      }
+    ],
+    "color": "#fff",
+    "selectedColor": "#d8becf",
+    "backgroundColor": "#000"
+  }
+}
