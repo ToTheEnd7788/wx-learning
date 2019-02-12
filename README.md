@@ -1,2 +1,2 @@
-# threejs-learning
-learning threejs with book
+# wx-learning
+Learning WX develop
